@@ -43,7 +43,6 @@ void morph(char* text, char* text2) {
 		if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z')) {
 			if (islower(text[i])) {
 				text2[n] = toupper(text[i]);
-				/*n++;*/
 			}
 			else {
 				text2[n] = text[i];
@@ -69,9 +68,6 @@ void pismena(char* text) {
 		printf("Sprava nie je nacitana\n");
 		return;
 	}
-	//vymaza
-	printf("Zadaj pozadovanu dlzku slova: ");
-	//
 	scanf("%i", &k);
 	if (k >= 1 && k <= 100) {
 		char ch[1000];
@@ -87,7 +83,6 @@ void pismena(char* text) {
 void darude(char* text2) {
 	int pozicia, n = 0;
 	char darude[26] = { 0 };
-	//char darude[26]={ 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' };
 	char pismena, ulozisko[1000] = { '\0' };
 	if (text2[0] == '\0') {
 		printf("Nie je k dispozcii upravena sprava\n");
@@ -105,7 +100,6 @@ void darude(char* text2) {
 		if (darude[i] > maxh)
 			maxh = darude[i];
 	}
-	printf("Ombre %d\n", maxh);
 
 	for (n = 0; n < 26; n++) {
 		size_t size = n;
